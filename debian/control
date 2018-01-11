@@ -1,0 +1,11 @@
+Source: wb-mqtt-orvibo
+Maintainer: Ilya Shalnev <zeke.home@gmail.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9), pkg-config
+
+Package: wb-mqtt-orvibo
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, mosquitto-clients, python-mosquitto, python-serial
+Description: MQTT driver for orvibo outlets

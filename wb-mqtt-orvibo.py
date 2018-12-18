@@ -511,6 +511,7 @@ def publisher():
                 mac = binascii.hexlify(bytearray(device.mac))
 
                 if not lock.locked():
+                    client.publish('/devices/s20/controls/' + mac + '/meta/id', mac + '|' + device.ip, 0, True)
                     client.publish('/devices/s20/controls/' + mac + '/meta/type', 'switch', 0, True)
                     client.publish('/devices/s20/controls/' + mac, device.status, 0, True)
         else:
